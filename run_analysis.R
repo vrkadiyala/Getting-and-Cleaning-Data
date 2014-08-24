@@ -78,5 +78,5 @@ tidy_data <- aggregate(train_test_merge[,3:ncol(train_test_merge)], list(subject
 tidy_data <- tidy_data[order(tidy_data$subject),]
 tidy_data$activity <- activity_lables[tidy_data$activity,]
 setwd(curDir)
-write.table(tidy_data, file ="./tidy_data.txt", sep ="/t", row.names = FALSE)
+write.table(tidy_data, file ="./tidy_data.txt", sep ="\t", row.names = FALSE)
 
